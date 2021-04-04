@@ -34,7 +34,7 @@ body {
 
 /** UTILIDADES **/
 .d-cv{
-  display: none;
+  visibility: hidden;
 }
 
 .btn-verde{
@@ -166,6 +166,12 @@ body {
     align-self: center;
     max-width: 80%;
     margin-right: 2rem;
+  }
+  .d-cv{
+    visibility: visible;
+  }
+  .cv{
+    display: none;
   }
 
 
