@@ -1,0 +1,350 @@
+:root{
+  /** FUENTES **/
+  /*Titulo*/
+  --fuente_logo: 'Poppins', sans-serif;
+  /*Contenido*/
+  --fuente_contenido: 'Oxygen', sans-serif;
+  /* Tamaño*/
+  --principal: 2.4rem;
+  --contenido: 1.6rem;
+  --titulo: 4.8rem;
+  --botones: 1.4rem;
+
+
+  /** COLORES **/
+  --verde: #42E2B8;
+  --negro: #000;
+  --blanco: #fff;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** 1rem = 10px **/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuente_contenido) ;
+    font-size: 1.6rem;
+    background: linear-gradient(135deg, #FAD7A1 0%, #E96D71 100%);
+    /* max-width: 48rem; */
+    font-weight: normal;
+    margin: 2rem;
+}
+
+/** UTILIDADES **/
+.d-cv{
+  display: none;
+}
+
+.btn-verde{
+  background-color: var(--verde);
+}
+
+.btn-trans{
+  background-color: transparent;
+}
+.centrar{
+  margin: 0 auto;
+}
+
+/** HEADER **/
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar h3 {
+  font-family: var(--fuente_logo);
+  font-weight: 900;
+  font-size: var(--principal);
+}
+.menu ul{
+  padding: 0;
+}
+.menu li{
+  list-style: none;
+  display: none;
+  margin-right: 1rem;
+  text-transform: uppercase;
+}
+.menu li:last-of-type{
+  margin-right: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: var(--botones);
+  font-weight: bold;
+}
+
+.boton{
+  display: flex;
+  justify-content: center;
+  padding: 1rem 3rem;
+  max-width: 80%;
+  /* margin: 0 auto; */
+  border-radius: 3rem;
+  border-color: var(--negro);
+  line-height: 2.2rem;
+  font-weight: bold;
+  font-size: var(--botones);
+  text-decoration: none;
+  height: 4.9rem;
+  box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.25);;
+  cursor: pointer;
+}
+.contenido-header{
+  display: flex;
+  flex-direction:column ;
+}
+.contenido-header img{
+  justify-self: center;
+}
+.texto-header h1{
+  font-size: var(--titulo);
+}
+
+.texto-header span{
+  font-size: 5.9rem;
+}
+
+.iconos-contacto{
+  display: flex;
+  flex-direction: row;
+}
+
+.icono-contacto{
+  display: flex;
+  margin-right: 1.5rem;
+  height: 4.4rem;
+  width: 4.4rem;
+  background-color: var(--verde);
+  border: 2px solid var(--negro);
+  border-radius: .5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono-contacto:last-of-type{
+  margin-right: 0;
+}
+
+.icono-contacto img{
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+@media (min-width: 720px){
+  .contenido-header{
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .menu li{
+    display: inline;
+  }
+  .menu a:hover{
+    color: var(--negro);
+  }
+  .nav-bar button{
+    content: 'DESCARGAR CURRICULUM';
+  }
+  .contenido-header img{
+    max-width: 60.4rem;
+    width: 70%;
+    max-height: 61.1rem;
+  }
+  .menu{
+    width: 40%;
+    margin: 0 auto;
+  }
+  .texto-header{
+    align-self: center;
+    max-width: 80%;
+    margin-right: 2rem;
+  }
+
+
+}
+
+.introduccion{
+  font-size: var(--principal);
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.introduccion span{
+  font-weight: bold;
+}
+
+/** PROYECTOS **/
+.proyecto-portafolio{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6rem;
+}
+
+.imagen-proyecto{
+  text-align: center;
+}
+.proyecto-portafolio h3, .contacto h3{
+  display: block;
+  width: fit-content;
+  padding: 1rem;
+  background-color: var(--negro);
+  color: var(--verde);
+  -webkit-box-shadow: -5px 5px 0px 0px rgb(255 255 255);
+  -moz-box-shadow: -5px 5px 0px 0px rgb(255 255 255);
+  box-shadow: -5px 5px 0px 0px rgb(255 255 255);
+}
+.texto-proyecto{
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+.contenedor-comentario{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 95%;
+  align-self: center;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.2);
+  background-clip: padding-box;
+  border-radius: 2rem;
+  box-shadow: inset 4px 4px 0 0 rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+}
+
+.contenedor-comentario img{
+  width: fit-content;
+  align-self: center;
+}
+
+.contenedor-comentario p:first-of-type{
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.autor-comentario{
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.5)
+}
+@media (min-width: 720px){
+  .proyecto-portafolio{
+    max-width: 72rem;
+    margin: 0 auto 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content;
+    /* column-gap: 2rem; */
+  }
+  .descripcion-proyecto{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2 ;
+    align-self: center;
+  }
+  .contenedor-comentario{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+  }
+  .centrar{
+    margin:0;
+  }
+  .imagen-proyecto{
+    justify-self: center;
+    align-self: center;
+  }
+  .descripcion-proyecto:nth-of-type(2){
+    grid-column: 1 / 2;
+  }
+}
+.botones-proyecto .boton{
+  margin-bottom: 2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.botones-proyecto{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.boton img{
+  margin-right: 1rem;
+}
+
+.contacto{
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.formulario{
+  display: grid;
+  gap: 1rem;
+}
+
+.formulario label span{
+  color: red;
+  font-size: 1.2rem;
+  position: absolute;
+}
+.formulario input[type="text"], 
+.formulario input[type="email"],
+textarea{
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.formulario input[type="submit"]{
+  margin: 0;
+  max-width: 100%;
+}
+.formulario input{
+  padding: 1rem;
+  line-height: 2.6rem;
+}
+.formulario textarea{
+  padding: 1rem;
+  height: 15rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 720px){
+  .contacto{
+    max-width: 72rem;
+  }
+  .contacto p{
+    text-align: center;
+  }
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: 4rem auto 1rem;
+  text-align: center;
+}
+
+.footer-corazon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.footer-corazon img{
+  margin: 0 .5rem;
+}
