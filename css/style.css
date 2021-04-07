@@ -89,7 +89,6 @@ body {
   justify-content: center;
   padding: 1rem 3rem;
   max-width: 80%;
-  /* margin: 0 auto; */
   border-radius: 3rem;
   border-color: var(--negro);
   line-height: 2.2rem;
@@ -181,7 +180,7 @@ body {
     margin-right: 2rem;
   }
   .d-cv{
-    visibility: visible;
+    display: block;
   }
   .cv{
     display: none;
