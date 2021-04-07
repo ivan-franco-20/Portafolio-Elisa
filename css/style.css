@@ -39,9 +39,7 @@ body {
 } */
 
 /** UTILIDADES **/
-.d-cv{
-  visibility: hidden;
-}
+
 
 .btn-verde{
   background-color: var(--verde);
@@ -102,6 +100,11 @@ body {
   box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.25);;
   cursor: pointer;
 }
+
+.d-cv{
+  display: none;
+}
+
 .contenido-header{
   display: flex;
   flex-direction:column ;
